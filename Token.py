@@ -1,8 +1,9 @@
 class Token:
-    def __init__(self, token, cat, val):
+    def __init__(self, token, cat, val, start, index):
         self.token = token
         self.cat = cat
         self.val = val
+        self.coords = index[start]
     
     def getToken(self):
         return self.token
@@ -12,6 +13,9 @@ class Token:
     
     def getVal(self):
         return self.val
+    
+    def getCoords(self):
+        return self.coords
 
 tokens = set()
 tokens.add("=")

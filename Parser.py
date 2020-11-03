@@ -41,7 +41,8 @@ def action():
     action = table[token][state]
     #Check is a valid action
     if pd.isnull(action):
-        print("Fatal: Syntax error, unexpected '" + str(input_[0].getVal()) + "' found")
+        print("" + project.sys.argv[1] + str(input_[0].getCoords()) + " Fatal: Syntax error, unexpected '"
+                + str(input_[0].getVal()) + "' found")
         print("Fatal: Compliation aborted")
         exit()
     
